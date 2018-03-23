@@ -13,7 +13,7 @@
 	
 	
 -->
-<form action = "poll_data.jsp" method = "post">
+<form action = "../day2/poll_data.jsp" method = "post">
 설문조사. <br>가장 좋아하는 아이돌 그룹은? <br>
 <input type = "radio" name = "r1" value = "Red"> 레드벨벳
 <input type = "radio" name = "r1" value = "Twice"> 트와이스
