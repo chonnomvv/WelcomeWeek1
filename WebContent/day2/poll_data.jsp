@@ -90,6 +90,8 @@
 		</tr>
 
 	</table>
+	
+	<a href="../Day3/logout.jsp">로그아웃</a>
 
 
 </body>

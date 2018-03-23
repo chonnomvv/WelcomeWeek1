@@ -13,10 +13,15 @@
 		//System.out.println(value);
 		//response.sendRedirect("back.jsp");
 		if (value.equals("0")) {
-			url = "../day2/poll.jsp";
+			String id = (String) session.getAttribute("member");
+			if (id != null) {
+				url = "../day2/poll.jsp";
+			} else {
+				url = "../day3/login.jsp";
+			}
 		} else if (value.equals("1")) {
 			url = "./request_calendar.jsp";
-		} else if (value.equals("2")){
+		} else if (value.equals("2")) {
 			url = "./login.jsp";
 		}
 

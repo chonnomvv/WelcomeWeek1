@@ -7,24 +7,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%!
-	String id = "admin";
-	String pw = "1234";
-	String welcome = null;
-%>
-
 <%
 	String id = request.getParameter("user");
 	String pw = request.getParameter("pw");
+	boolean flag = false;
 	
 	if(id.equals("admin")&&pw.equals("1234")){
-		welcome = "반갑습니다.";
-	} else{
-		welcome = "there is no one";
-		response.sendRedirect("login.jsp?welcome=" +0);
+		flag = true;
+	}
+	if(flag){
+		out.print("반갑습니다.");
+		session.setAttribute("member", id);
+		
+	}
+	else{
+		response.sendRedirect("login.jsp?code=0");
+
 	}
 %>
-<br><%=welcome%>
+<br>
 
 </body>
 </html>
